@@ -10,7 +10,7 @@ form.addEventListener("submit", async (e) => {
   const file = fileInput.files[0];
 
   if (!file) {
-    statusText.textContent = "Pilih file dulu";
+    statusText.textContent = "Please select a file";
     return;
   }
 
@@ -35,8 +35,8 @@ form.addEventListener("submit", async (e) => {
 
     resultText.textContent = data.text;
     resultBox.classList.remove("hidden");
-    statusText.textContent = "Selesai";
+    statusText.textContent = "Finish Transcribing";
   } catch (err) {
-    statusText.textContent = "Error terjadi";
+    statusText.textContent = "Error";
   }
 });
