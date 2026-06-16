@@ -1,4 +1,4 @@
-"# Audio-Transciber-Lite" 
+# Audio-Transciber-Lite
 
 ## Setup
 
