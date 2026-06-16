@@ -2,8 +2,11 @@ import sys
 import os
 import assemblyai as aai
 from flask import Flask, request, jsonify, send_from_directory
+from dotenv import load_dotenv
 
-aai.settings.api_key = "1b3a5c6e5fa54724a9b185a4ccb1dc8f"
+load_dotenv()
+
+aai.settings.api_key = os.getenv("ASSEMBLYAI_API_KEY")
 
 def transcribe_audio(audio_path):
     config = aai.TranscriptionConfig(
